@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Syntax Differences between Python and JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #body {
+            display: flex;
+            overflow: auto;
+            margin-left: 250px;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 11%;
+            left: 75%;
+            background-color: darkseagreen;
+            padding: 0rem 7rem 1rem 1rem;
+            height: fit-content;
+            opacity: 0.8;
+        }
+
+        #section {
+            width: 60%;
+        }
+
+        p {
+            font-size: large;
+        }
+
+        li {
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        hr {
+            height: 2px;
+            width: 50%;
+            border-width: 0;
+            background-color: rgb(188, 157, 143);
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .keyword {
+            font-weight: bold;
+            ;
+        }
+
+        code {
+            padding: 0 5px 2px;
+            font-size: .8em;
+            font-weight: 600;
+            background-color: rgb(196, 194, 194);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            font-family: inherit;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        input {
+            font-family: inherit;
+            line-height: inherit;
+            color: #2e3750;
+            min-width: 20em;
+        }
+
+        .input {
+            position: relative;
+            font-size: 1.5em;
+            background: linear-gradient(21deg, #10abff, #1beabd);
+            padding: 3px;
+            display: inline-block;
+            border-radius: 9999em;
+            margin-left: 20px;
+        }
+
+        .input :not(span) {
+            position: relative;
+            display: inherit;
+            border-radius: inherit;
+            margin: 1px;
+            border: none;
+            outline: none;
+            padding: 7px 1em;
+            z-index: 1;
+        }
+
+        .input :not(span):focus+span {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .input span {
+            transform: scale(0.993, 0.94);
+            transition: transform 0.5s, opacity 0.25s;
+            opacity: 0;
+            position: absolute;
+            z-index: 0;
+            margin: 4px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+        }
+
+
+        th {
+            font-size: 18px;
+            padding: 14px 10px;
+
+        }
+
+        td {
+            padding: 14px 10px;
+            font-size: 12.5pt;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            vertical-align: middle;
+        }
+
+        p {
+            text-align: justify
+        }
+
+        thead {
+            background-color: #333;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgb(245, 245, 182);
+        }
+
+        tbody th {
+            background-color: #7a7a79;
+            color: #fff;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(even) th {
+            background-color: #6b6b6a;
+        }
+
+        .button-64 {
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: inherit;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 3px;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+            margin: 50px 0 25px 0;
+            font-size: 16px;
+        }
+
+        .button-64:active,
+        .button-64:hover {
+            outline: 0;
+        }
+
+        .button-64 span {
+            background-color: rgb(5, 6, 45);
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+
+        .button-64:hover span {
+            background: none;
+        }
+		
+		#sample{
+			font-size: 7px;
+		}
+		
+		#samplepicture{
+			font-size: 7px;
+		}
+    </style>
+
+<script>
+var targenum = Math.floor(Math.random() * 100) + 1;
+function guessnumber(){
+	var gus = document.getElementById("guessInput").value;
+	var result = "";
+	if (isNaN(gus) || gus < 1 || gus > 100) {
+        document.getElementById("a").innerHTML = "Please enter a valid number between 1 and 100.";
+        return;
+		}
+	if (gus == targenum) {
+        result = "Yes! The target number was "+ gus;
+		document.getElementById("a").innerHTML = result;
+		return;
+		}
+	document.getElementById("a").innerHTML = "2";
+    if (gus > targenum) {
+        result += " The number is NOT " + gus + "  and higher than the target number.";
+    }else {
+        result += " The number is NOT " + gus + " and smaller than the target number.";
+		}
+
+    if (Math.abs(targenum - gus) >= 10) {
+        result += " The number is too far away!";
+    }else {
+        result += " It\'s close.";
+		}
+	document.getElementById("a").innerHTML = result;
+	return;
+}
+</script>
+
+</head>
+
+<body style="background-color: beige;">
+    <div id="body">
+        <div id="section">
+            <section id="topic">
+                <h1 style="font-size: xx-large; ">Usage Differences between Python and JavaScript</h1>
+                <h5>Last edit: April 6, 2023 By Jason Wong</h5>
+                <img src="PVJS.png" width="80%">
+            </section>
+
+            <section id="intro">
+                <p style="font-size: larger;">
+				<span class="keyword">JavaScript</span> and <span class="keyword">Python</span> 
+				are both top 10 popular programing languages in the world and are used for a wide range of applications. 
+				Due to their strengths and weakness, they are often used for different purposes.
+                </p>
+            </section>
+            <hr />
+            <section id="JavaScript">
+				
+                <h2>JavaScript</h2>
+                <p>
+				<span class="keyword">JavaScript</span> is primarily used for front-end development, 
+				meaning it controls the behavior of the program-user, like a reaction of a button or a text box. 
+				Also, it means that JavaScript is commonly not used for back-end development, 
+				the control on the server or database. </br>
+                </p>
+                <h3>Web Development</h3>
+                <p>
+				<span class="keyword">JavaScript</span> is mainly used for controlling the behaviors of the website. 
+				It allows the website to be more flexible and interesting. 
+				For example, the website will pop up different pictures by clicking different buttons. 
+				In a website, <span class="keyword">JavaScript</span> ensures the interactive of it, 
+				like mouseover action and animations, and make it more user-friendly, like a game and go-top button.</br>
+				Here is a example of small game built by <span class="keyword">JavaScript</span>
+                </p>
+				<p>Enter your guess between 1 and 100:</p>
+				<input type="text" id="guessInput">
+				<button onclick="guessnumber()">Guess</button>
+				<p id="a"></p>
+            </section>
+            <hr />
+            <section id="Python">
+                <h2>Python</h2>
+                <p>
+				<span class="keyword">Python</span> is one of the most popular programing languages because of easy to read. 
+				Nowadays, Python is used in different ways, like artificial intelligence (AI), file management, and web crawling. 
+				Compare with JavaScript, <span class="keyword">Python</span> is better for handling data.
+				So, Python is commonly used for back-end development.</br>
+                </p>
+                <h3>Data Science</h3>
+                <p>
+				<span class="keyword">Python</span> is a well-known language for data science, as a lot of powerful open-source libraries like Pandas can be imported easily to manage the data. 
+				Because of the libraries used for web crawling, like BeautifulSoup, <span class="keyword">Python</span> can not only used for data analysis, but also used for collecting data. 
+                </p>
+				<img src="UseageSample/data_example.jpg">
+				<p id="sample">
+				This is an example how to build a scatter plot by Python. From
+				<a href="https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python">www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python</a></br></br>
+				</P>
+				
+				<h3>Personal Desktop Applications</h3>
+				<p>
+				<span class="keyword">Python</span> is one of the most beginner-friendly programing languages and it allows beginners to spend a short time to learn how to develop a program for personal-use, like file management. 
+				For example, using the library “os”, the program can get all file name in giving folder path and change the file location by change the file name (file path). 
+				Besides, since there are a lot of open-source libraries and great community, more and more things beginners can do, 
+				like creating a bag of picture or gif, and writing word documents with pattern or repeating context.
+				</br>
+				</p>
+				<img src="UseageSample/move_file.jpg">
+				<p>
+				Here is a 19 lines Python program to move all files to a single root folder.</br></br>
+				</p>
+				
+				
+				<h3>Machine Learning</h3>
+				<p>
+				<span class="keyword">Python</span> is also known as a machine learning language. Recently, AI drawing and AI chatting is very popular. 
+				In personal computer, Python can train a personal model to generate picture or chat by using libraries, like PyTorch.
+				</p>
+				<img src="UseageSample/AI.jpg" width="700" height="480">
+				<p id="sample">
+				Stable Diffusion webUI is the most famous AI drawing program which is using Python to build, source:
+				<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github.com/AUTOMATIC1111/stable-diffusion-webui</a>
+				</p>
+				
+            </section>
+
+            <a href=""><button class="button-64" role="button"><span class="text"><span class="text">Back to Home
+                            Page</span></button></a>
+        </div>
+
+        <div id="sidebar">
+            <h3>In this page</h1>
+                <ul style="font-style: italic;">
+                    <li><a href="#JavaScript">JavaScript</a></li>
+                    <li><a href="#Python">Python</a></li>
+                    
+                </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
