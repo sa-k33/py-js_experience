@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Coding Experience</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Our Coding Experience with Python</title>
+    <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
     <header>
-        <h1>My Coding Experience</h1>
+        <h1>Experience with Python and JavaScript</h1>
     </header>
 
-    <main>         
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Introduction</a>
+                    <div class="dropdown-content">
+                        <a href="#">Python</a>
+                        <a href="#">JavaScript</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Usage</a>
+                    <div class="dropdown-content">
+                        <a href="#">Python</a>
+                        <a href="#">JavaScript</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Syntax Differences</a>
+                    <div class="dropdown-content">
+                        <a href="#">Introduction</a>
+                        <a href="#">Code Block</a>
+                        <a href="#">Definition of Variable</a>
+                        <a href="#">Commenting</a>
+                        <a href="#">Logical Operators</a>
+                        <a href="#">Inputs & Outputs</a>
+                        <a href="#">If-Conditional</a>
+                        <a href="#">Loops</a>
+                        <a href="#">Takeaway</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Libraries</a>
+                    <div class="dropdown-content">
+                        <a href="#">Python</a>
+                        <a href="#">JavaScript</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
         <section class="languages">
             <h2>JavaScript</h2>
             <p>Click the button to see an alert with a message about my JavaScript experience:</p>
@@ -25,6 +67,7 @@
         </section>
     </main>
 
-    <!--<script src="scripts.js"></script> -->
+    <!--<script src="home.js"></script> -->
 </body>
+
 </html>
