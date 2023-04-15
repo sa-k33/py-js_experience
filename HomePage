@@ -17,40 +17,40 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
+                <!--<li class="dropdown">
                     <a href="#" class="dropbtn">Introduction</a>
                     <div class="dropdown-content">
-                        <a href="#">Python</a>
-                        <a href="#">JavaScript</a>
+                        <a href="#Python">Python</a>
+                        <a href="#JavaScript">JavaScript</a>
+                    </div>
+                </li>-->
+                <li class="dropdown">
+                    <a href="usage/usage.html" class="dropbtn">Usage</a>
+                    <div class="dropdown-content">
+                        <<a href="usage/usage.html#Python">>Python</a>
+                        <a href="usage/usage.html#JavaScript">JavaScript</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Usage</a>
+                    <a href="Syntax Different/syntax.html" class="dropbtn">Syntax Differences</a>
                     <div class="dropdown-content">
-                        <a href="#">Python</a>
-                        <a href="#">JavaScript</a>
+                        <a href="Syntax Different/syntax.html#topic">Introduction</a>
+                        <a href="Syntax Different/syntax.html#codeBlock">Code Block</a>
+                        <a href="Syntax Different/syntax.html#variable">Definition of Variable</a>
+                        <a href="Syntax Different/syntax.html#comment">Commenting</a>
+                        <a href="Syntax Different/syntax.html#logical">Logical Operators</a>
+                        <a href="Syntax Different/syntax.html#in&out">Inputs & Outputs</a>
+                        <a href="Syntax Different/syntax.html#ifCondition">If-Conditional</a>
+                        <a href="Syntax Different/syntax.html#loop">Loops</a>
+                        <a href="Syntax Different/syntax.html#summary">Takeaway</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Syntax Differences</a>
-                    <div class="dropdown-content">
-                        <a href="#">Introduction</a>
-                        <a href="#">Code Block</a>
-                        <a href="#">Definition of Variable</a>
-                        <a href="#">Commenting</a>
-                        <a href="#">Logical Operators</a>
-                        <a href="#">Inputs & Outputs</a>
-                        <a href="#">If-Conditional</a>
-                        <a href="#">Loops</a>
-                        <a href="#">Takeaway</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Libraries</a>
-                    <div class="dropdown-content">
-                        <a href="#">Python</a>
-                        <a href="#">JavaScript</a>
-                    </div>
+                    <a href="library/library.html" class="dropbtn">Libraries</a>
+                    <!--<div class="dropdown-content">
+                        <a href="library/library.html#python">Python</a>
+                        <a href="library/library.html#javascript">JavaScript</a>
+                    </div>-->
                 </li>
             </ul>
         </nav>
