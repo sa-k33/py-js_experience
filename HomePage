@@ -11,7 +11,7 @@
         <h1>My Coding Experience</h1>
     </header>
 
-    <main>
+    <main>         
         <section class="languages">
             <h2>JavaScript</h2>
             <p>Click the button to see an alert with a message about my JavaScript experience:</p>
@@ -25,6 +25,6 @@
         </section>
     </main>
 
-    <script src="scripts.js"></script>
+    <!--<script src="scripts.js"></script> -->
 </body>
 </html>
