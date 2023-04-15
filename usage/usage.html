@@ -1,145 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Syntax Differences between Python and JavaScript</title>
+	<link rel="stylesheet" href="usage.css">
 
-    <title>Syntax Differences between Python and JavaScript</title>
-    <link rel="stylesheet" href="usage.css">
+	<script>
+		var targenum = Math.floor(Math.random() * 100) + 1;
+		function guessnumber() {
+			var gus = document.getElementById("guessInput").value;
+			var result = "";
+			if (isNaN(gus) || gus < 1 || gus > 100) {
+				document.getElementById("a").innerHTML = "Please enter a valid number between 1 and 100.";
+				return;
+			}
+			if (gus == targenum) {
+				result = "Yes! The target number was " + gus;
+				document.getElementById("a").innerHTML = result;
+				return;
+			}
+			document.getElementById("a").innerHTML = "2";
+			if (gus > targenum) {
+				result += " The number is NOT " + gus + "  and higher than the target number.";
+			} else {
+				result += " The number is NOT " + gus + " and smaller than the target number.";
+			}
 
-<script>
-var targenum = Math.floor(Math.random() * 100) + 1;
-function guessnumber(){
-	var gus = document.getElementById("guessInput").value;
-	var result = "";
-	if (isNaN(gus) || gus < 1 || gus > 100) {
-        document.getElementById("a").innerHTML = "Please enter a valid number between 1 and 100.";
-        return;
+			if (Math.abs(targenum - gus) >= 10) {
+				result += " The number is too far away!";
+			} else {
+				result += " It\'s close.";
+			}
+			document.getElementById("a").innerHTML = result;
+			return;
 		}
-	if (gus == targenum) {
-        result = "Yes! The target number was "+ gus;
-		document.getElementById("a").innerHTML = result;
-		return;
-		}
-	document.getElementById("a").innerHTML = "2";
-    if (gus > targenum) {
-        result += " The number is NOT " + gus + "  and higher than the target number.";
-    }else {
-        result += " The number is NOT " + gus + " and smaller than the target number.";
-		}
-
-    if (Math.abs(targenum - gus) >= 10) {
-        result += " The number is too far away!";
-    }else {
-        result += " It\'s close.";
-		}
-	document.getElementById("a").innerHTML = result;
-	return;
-}
-</script>
+	</script>
 
 </head>
 
 <body style="background-color: beige;">
-    <div id="body">
-        <div id="section">
-            <section id="topic">
-                <h1 style="font-size: xx-large; ">Usage Differences between Python and JavaScript</h1>
-                <h5>Last edit: April 6, 2023 By Jason Wong</h5>
-                <img src="PVJS.png" width="80%">
-            </section>
+	<div id="body">
+		<div id="section">
+			<section id="topic">
+				<h1 style="font-size: xx-large; ">Usage Differences between Python and JavaScript</h1>
+				<h5>Last edit: April 6, 2023 By Jason Wong</h5>
+				<img src="PVJS.png" width="80%">
+			</section>
 
-            <section id="intro">
-                <p style="font-size: larger;">
-				<span class="keyword">JavaScript</span> and <span class="keyword">Python</span> 
-				are both top 10 popular programing languages in the world and are used for a wide range of applications. 
-				Due to their strengths and weakness, they are often used for different purposes.
-                </p>
-            </section>
-            <hr />
-            <section id="JavaScript">
-				
-                <h2>JavaScript</h2>
-                <p>
-				<span class="keyword">JavaScript</span> is primarily used for front-end development, 
-				meaning it controls the behavior of the program-user, like a reaction of a button or a text box. 
-				Also, it means that JavaScript is commonly not used for back-end development, 
-				the control on the server or database. </br>
-                </p>
-                <h3>Web Development</h3>
-                <p>
-				<span class="keyword">JavaScript</span> is mainly used for controlling the behaviors of the website. 
-				It allows the website to be more flexible and interesting. 
-				For example, the website will pop up different pictures by clicking different buttons. 
-				In a website, <span class="keyword">JavaScript</span> ensures the interactive of it, 
-				like mouseover action and animations, and make it more user-friendly, like a game and go-top button.</br>
-				Here is a example of small game built by <span class="keyword">JavaScript</span>
-                </p>
+			<section id="intro">
+				<p style="font-size: larger;">
+					<span class="keyword">JavaScript</span> and <span class="keyword">Python</span>
+					are both top 10 popular programing languages in the world and are used for a wide range of
+					applications.
+					Due to their strengths and weakness, they are often used for different purposes.
+				</p>
+			</section>
+			<hr />
+			<section id="JavaScript">
+
+				<h2>JavaScript</h2>
+				<p>
+					<span class="keyword">JavaScript</span> is primarily used for front-end development,
+					meaning it controls the behavior of the program-user, like a reaction of a button or a text box.
+					Also, it means that JavaScript is commonly not used for back-end development,
+					the control on the server or database. </br>
+				</p>
+				<h3>Web Development</h3>
+				<p>
+					<span class="keyword">JavaScript</span> is mainly used for controlling the behaviors of the website.
+					It allows the website to be more flexible and interesting.
+					For example, the website will pop up different pictures by clicking different buttons.
+					In a website, <span class="keyword">JavaScript</span> ensures the interactive of it,
+					like mouseover action and animations, and make it more user-friendly, like a game and go-top
+					button.</br>
+					Here is a example of small game built by <span class="keyword">JavaScript</span>
+				</p>
 				<p>Enter your guess between 1 and 100:</p>
 				<input type="text" id="guessInput">
 				<button onclick="guessnumber()">Guess</button>
 				<p id="a"></p>
-            </section>
-            <hr />
-            <section id="Python">
-                <h2>Python</h2>
-                <p>
-				<span class="keyword">Python</span> is one of the most popular programing languages because of easy to read. 
-				Nowadays, Python is used in different ways, like artificial intelligence (AI), file management, and web crawling. 
-				Compare with JavaScript, <span class="keyword">Python</span> is better for handling data.
-				So, Python is commonly used for back-end development.</br>
-                </p>
-                <h3>Data Science</h3>
-                <p>
-				<span class="keyword">Python</span> is a well-known language for data science, as a lot of powerful open-source libraries like Pandas can be imported easily to manage the data. 
-				Because of the libraries used for web crawling, like BeautifulSoup, <span class="keyword">Python</span> can not only used for data analysis, but also used for collecting data. 
-                </p>
+			</section>
+			<hr />
+			<section id="Python">
+				<h2>Python</h2>
+				<p>
+					<span class="keyword">Python</span> is one of the most popular programing languages because of easy
+					to read.
+					Nowadays, Python is used in different ways, like artificial intelligence (AI), file management, and
+					web crawling.
+					Compare with JavaScript, <span class="keyword">Python</span> is better for handling data.
+					So, Python is commonly used for back-end development.</br>
+				</p>
+				<h3>Data Science</h3>
+				<p>
+					<span class="keyword">Python</span> is a well-known language for data science, as a lot of powerful
+					open-source libraries like Pandas can be imported easily to manage the data.
+					Because of the libraries used for web crawling, like BeautifulSoup, <span
+						class="keyword">Python</span> can not only used for data analysis, but also used for collecting
+					data.
+				</p>
 				<img src="UseageSample/data_example.jpg">
 				<p id="sample">
-				This is an example how to build a scatter plot by Python. From
-				<a href="https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python">www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python</a></br></br>
+					This is an example how to build a scatter plot by Python. From
+					<a
+						href="https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python">www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python</a></br></br>
 				</P>
-				
+
 				<h3>Personal Desktop Applications</h3>
 				<p>
-				<span class="keyword">Python</span> is one of the most beginner-friendly programing languages and it allows beginners to spend a short time to learn how to develop a program for personal-use, like file management. 
-				For example, using the library “os”, the program can get all file name in giving folder path and change the file location by change the file name (file path). 
-				Besides, since there are a lot of open-source libraries and great community, more and more things beginners can do, 
-				like creating a bag of picture or gif, and writing word documents with pattern or repeating context.
-				</br>
+					<span class="keyword">Python</span> is one of the most beginner-friendly programing languages and it
+					allows beginners to spend a short time to learn how to develop a program for personal-use, like file
+					management.
+					For example, using the library “os”, the program can get all file name in giving folder path and
+					change the file location by change the file name (file path).
+					Besides, since there are a lot of open-source libraries and great community, more and more things
+					beginners can do,
+					like creating a bag of picture or gif, and writing word documents with pattern or repeating context.
+					</br>
 				</p>
 				<img src="UseageSample/move_file.jpg">
 				<p>
-				Here is a 19 lines Python program to move all files to a single root folder.</br></br>
+					Here is a 19 lines Python program to move all files to a single root folder.</br></br>
 				</p>
-				
-				
+
+
 				<h3>Machine Learning</h3>
 				<p>
-				<span class="keyword">Python</span> is also known as a machine learning language. Recently, AI drawing and AI chatting is very popular. 
-				In personal computer, Python can train a personal model to generate picture or chat by using libraries, like PyTorch.
+					<span class="keyword">Python</span> is also known as a machine learning language. Recently, AI
+					drawing and AI chatting is very popular.
+					In personal computer, Python can train a personal model to generate picture or chat by using
+					libraries, like PyTorch.
 				</p>
 				<img src="UseageSample/AI.jpg" width="700" height="480">
 				<p id="sample">
-				Stable Diffusion webUI is the most famous AI drawing program which is using Python to build, source:
-				<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github.com/AUTOMATIC1111/stable-diffusion-webui</a>
+					Stable Diffusion webUI is the most famous AI drawing program which is using Python to build, source:
+					<a
+						href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github.com/AUTOMATIC1111/stable-diffusion-webui</a>
 				</p>
-				
-            </section>
 
-            <a href=""><button class="button-64" role="button"><span class="text"><span class="text">Back to Home
-                            Page</span></button></a>
-        </div>
+			</section>
 
-        <div id="sidebar">
-            <h3>In this page</h1>
-                <ul style="font-style: italic;">
-                    <li><a href="#JavaScript">JavaScript</a></li>
-                    <li><a href="#Python">Python</a></li>
-                    
-                </ul>
-        </div>
-    </div>
-    <!--<script src="usage.js"></script>-->
+			<a href=""><button class="button-64" role="button"><span class="text"><span class="text">Back to Home
+							Page</span></button></a>
+		</div>
+
+		<div id="sidebar">
+			<h3>In this page</h1>
+				<ul style="font-style: italic;">
+					<li><a href="#JavaScript">JavaScript</a></li>
+					<li><a href="#Python">Python</a></li>
+
+				</ul>
+		</div>
+	</div>
+	<!--<script src="usage.js"></script>-->
 </body>
 
 </html>
