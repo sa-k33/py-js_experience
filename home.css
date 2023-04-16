@@ -3,7 +3,6 @@
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
     background-color: inherit;
     margin: 0;
     padding: 0;
@@ -41,3 +40,6 @@
     background-color: #3e8e41;
   }
   
+nav {
+  display: flex;
+  }
