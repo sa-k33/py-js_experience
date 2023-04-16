@@ -29,7 +29,7 @@
                 <li class="dropdown">
                     <a href="usage/usage.html" class="dropbtn">Usage</a>
                     <div class="dropdown-content">
-                        <<a href="usage/usage.html#Python">>Python</a>
+                        <a href="usage/usage.html#Python">Python</a>
                         <a href="usage/usage.html#JavaScript">JavaScript</a>
                     </div>
                 </li>
