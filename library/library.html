@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <title>Python vs JavaScript: Library Usage</title>
   <style>
@@ -289,13 +289,14 @@
       background: #0d1117;
       color: #c9d1d9;
     }
+
     .highlight pre {
       line-height: 125%;
     }
+
     pre {
       padding: .5rem .75rem;
     }
-    
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script>
@@ -348,7 +349,7 @@
             <a href="https://ahfarmer.github.io/emoji-search/">
               <h1>Emoji Search</h1>
             </a>
-            <embed type="text/html" src="https://ahfarmer.github.io/emoji-search/ " width=70% height=50%>
+            <embed type="text/html" src="https://ahfarmer.github.io/emoji-search/ " width=100% height=50%>
           <p>As shown in the emoji search demo, you can create reusable components for search, comments, filters, etc.
             Then compose them together in different ways to generate multiple pages from a single set of components.
             Whenever the underlying data updates, React efficiently re-renders only the changed components.
@@ -385,54 +386,53 @@
           <b>Python</b>provides many libraries for scientific computing, data analysis, machine learning, and web
           development.
           Unlike JavaScript, these libraries are required to download through Python's package manager, pip. After that,
-          they can be easily used in your code by <code>import</code> the library. 
+          they can be easily used in your code by <code>import</code> the library.
           Here are some popular libraries you hear of:<br>
         </p>
         <ol>
           <section id="numpy">
-          <li>NumPy</li>
-          <p>
-            <a href="https://numpy.org/"><b>NumPy</b></a> is great for working with multi-dimensional arrays and
-            matrices. It is essential for engineering and
-            science domains. Fast array operations and integration of C/C++ or Fortran code are performed efficiently.
-          </p>
+            <li>NumPy</li>
+            <p>
+              <a href="https://numpy.org/"><b>NumPy</b></a> is great for working with multi-dimensional arrays and
+              matrices. It is essential for engineering and
+              science domains. Fast array operations and integration of C/C++ or Fortran code are performed efficiently.
+            </p>
           </section>
           <section id="pandas">
-          <li>Pandas</li>
-          <p>
-            <a href="https://pandas.pydata.org/"><b>Pandas</b></a>
-            simplified working with tabular data. It is perfect for analyzing and manipulating data tables. CSV
-            files could be loaded into data frames. Selected columns, stats computed row-wise or column-wise, grouping
-            data, pivoted and merged datasets effortlessly by using <b>Pandas</b>. 
-            Example:
-          </p>
-          <pre class = "height">
-            <code>
-              import pandas as pd
+            <li>Pandas</li>
+            <p>
+              <a href="https://pandas.pydata.org/"><b>Pandas</b></a>
+              simplified working with tabular data. It is perfect for analyzing and manipulating data tables. CSV
+              files could be loaded into data frames. Selected columns, stats computed row-wise or column-wise, grouping
+              data, pivoted and merged datasets effortlessly by using <b>Pandas</b>.
+              Example:
+            </p>
+            <pre class="height">
+            <code>import pandas as pd
+            data = {
+              "Student": ["Abie", "Belly", "Canas"],
+              "Height": [168, 155, 178]
+            }
+            #load data into a DataFrame object:
+            df = pd.DataFrame(data)
 
-              data = {
-                "Student": ["Abie", "Belly", "Canas"],
-                "Height": [168, 155, 178]
-              }
-              #load data into a DataFrame object:
-              df = pd.DataFrame(data)
-
-              print(df) 
+            print(df) 
             </code>
           </pre>
-          <p>Result:</p>
-          <img src="GP_pandas_height.png">
-        </section>
-        <section id="random">
-          <h2>Random</h2>
-          <py-config>
-            packages = "random"
-          </py-config>
-          <py-script>
-            coin = random.choice(["heads", "tails"])
-            print(coin)
-          </py-script>
-        </section>
+            <p>Result:</p>
+            <img src="GP_pandas_height.png">
+          </section>
+          <section id="random">
+            <h2>Random</h2>
+            <py-config>
+              packages = "random"
+            </py-config>
+            <py-script>
+              import random
+              coin = random.choice(["heads", "tails"])
+              print(coin)
+            </py-script>
+          </section>
 
         </ol>
       </section>
@@ -452,7 +452,7 @@
           <ol>
             <li><a href="#numy">NumPy</a></li>
             <li><a href="#pandas">Pandas</a></li>
-            <li><a href="#random">Random/a></li>
+            <li><a href="#random">Random</a></li>
           </ol>
 
         </ul>
