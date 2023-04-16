@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -661,3 +662,668 @@
 </body>
 
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Differences between Python and JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #body {
+            display: flex;
+            overflow: auto;
+            margin-left: 60px;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 11%;
+            left: 75%;
+            background-color: darkseagreen;
+            padding: 0rem 7rem 1rem 1rem;
+            height: fit-content;
+            opacity: 0.8;
+        }
+
+        #section {
+            width: 60%;
+        }
+
+        p {
+            font-size: large;
+        }
+
+        li {
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        hr {
+            height: 2px;
+            width: 50%;
+            border-width: 0;
+            background-color: rgb(188, 157, 143);
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .keyword {
+            font-weight: bold;
+            ;
+        }
+
+        code {
+            padding: 0 5px 2px;
+            font-size: .8em;
+            font-weight: 600;
+            background-color: rgb(196, 194, 194);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            font-family: inherit;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        input {
+            font-family: inherit;
+            line-height: inherit;
+            color: #2e3750;
+            min-width: 20em;
+        }
+
+        .input {
+            position: relative;
+            background: linear-gradient(21deg, #10abff, #1beabd);
+            padding: 3px;
+            display: inline-block;
+            border-radius: 9999em;
+            margin-left: 20px;
+        }
+
+        .input :not(span) {
+            position: relative;
+            display: inherit;
+            border-radius: inherit;
+            margin: 1px;
+            border: none;
+            outline: none;
+            padding: 7px 1em;
+            z-index: 1;
+        }
+
+        .input :not(span):focus+span {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .input span {
+            transform: scale(0.993, 0.94);
+            transition: transform 0.5s, opacity 0.25s;
+            opacity: 0;
+            position: absolute;
+            z-index: 0;
+            margin: 4px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+        }
+
+
+        th {
+            font-size: 18px;
+            padding: 14px 10px;
+
+        }
+
+        td {
+            padding: 14px 10px;
+            font-size: 12.5pt;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            vertical-align: middle;
+        }
+
+        p {
+            text-align: justify
+        }
+
+        thead {
+            background-color: #333;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgb(245, 245, 182);
+        }
+
+        tbody th {
+            background-color: #7a7a79;
+            color: #fff;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(even) th {
+            background-color: #6b6b6a;
+        }
+
+        .button-64 {
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: inherit;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 3px;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+            margin: 25px 0 25px 0;
+            font-size: 16px;
+        }
+
+        .button-64:active,
+        .button-64:hover {
+            outline: 0;
+        }
+
+        .button-64 span {
+            background-color: rgb(5, 6, 45);
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+
+        .button-64:hover span {
+            background: none;
+        }
+    </style>
+
+    <script>
+        function welcome() {
+            var x = prompt("Hello, what is your preferred name?")
+            if (x == null) {
+                return
+            } else if (x == "") {
+                alert("Input cannot be blank!")
+                return
+            }
+            var y = prompt("How old are you?")
+            if (y == null) {
+                return
+            } else if (y == "") {
+                alert("Input cannot be blank!")
+                return
+            } else if (isNaN(y) || y < 0 || Math.floor(y) != y) {
+                alert("Please enter a valid age!")
+                return
+            }
+            console.log("Welcome, " + x + ", you are " + y + " year(s) old now!")
+            document.getElementById("hello").value = "Welcome, " + x + ", you are " + y + " year(s) old now!"
+        }
+
+        function GpaConverter() {
+            var GPA = prompt("Please enter your GPA! ")
+            if (GPA == null) {
+                return
+            } else if (GPA == "") {
+                alert("Input cannot be blank!")
+                return
+            } else if (isNaN(GPA) || GPA < 0 || GPA > 4.3) {
+                alert("Please enter a valid GPA!")
+                return
+            }
+            Number(GPA)
+            if (GPA > 4) {
+                GPA = "You got a A+ in this course! Well done! "
+            } else if (GPA > 3.7) {
+                GPA = "You got a A in this course! Well done! "
+            } else if (GPA > 3.3) {
+                GPA = "You got a A- in this course! Well done! "
+            } else if (GPA > 3.0) {
+                GPA = "You got a B+ in this course! Not bad! "
+            } else if (GPA > 2.7) {
+                GPA = "You got a B in this course! Not bad! "
+            } else if (GPA > 2.3) {
+                GPA = "You got a B- in this course! Not bad! "
+            } else if (GPA > 2.0) {
+                GPA = "You got a C+ in this course! Fighting! "
+            } else if (GPA > 1.7) {
+                GPA = "You got a C in this course! Fighting! "
+            } else if (GPA > 1.0) {
+                GPA = "You got a C- in this course! Fighting! "
+            } else if (GPA == 1.0) {
+                GPA = "You got a D in this course! What's wrong? "
+            } else {
+                GPA = "You cannot even pass the course. YOU got a F, please work harder in the next semester! "
+            }
+            console.log(GPA)
+            document.getElementById("grade").value = GPA
+        }
+    </script>
+
+</head>
+
+<body style="background-color: beige;">
+    <div id="body">
+        <div id="section">
+            <section id="topic">
+                <h1 style="font-size: xx-large; ">Syntax Differences between Python and JavaScript</h1>
+                <h5>Last edit: April 6, 2023 By Charlie Lau</h5>
+                <img src="PVJS.png" width="80%">
+            </section>
+
+            <section id="intro">
+                <p style="font-size: larger;">In the field of computer science, <span class="keyword">Python</span> and
+                    <span class="keyword">Javascript</span> are two very
+                    well-liked languages. In this
+                    section, we would like to investigate the <span class="keyword">syntactic differences</span> between
+                    Python and JavaScript.
+                    <br /><br />This is demonstrated below:
+                </p>
+            </section>
+            <hr />
+            <section id="codeBlock">
+                <h2>Code block</h2>
+                <h3>Python</h3>
+                <p>The amount of <span class="keyword">whitespace</span> in Python indicates to the computer <span
+                        class="keyword">what is and is not</span> a component of a
+                    function. Users may use <span class="keyword">space or tab</span> to perform the indentation.
+                    Without <span class="keyword">proper indentation</span>, the
+                    program will probably result with an <span class="keyword">error</span>.
+                </p>
+                <img src="Python/codeblock.png" />
+                <h3>JavaScript</h3>
+                <p>The amount of <span class="keyword">whitespace</span> in Javascript has <span class="keyword">no
+                        meaning</span>. A Javascript code block can be defined with
+                    <span class="keyword">curly brackets</span> ("<code>{}</code>") for grouping
+                    statements to be executed together. To make it <span class="keyword">easier to comprehend</span>,
+                    indentation will also being
+                    used.
+                </p>
+                <img src="JS/codeblock.png" style="margin-bottom: 15px;" />
+            </section>
+            <hr />
+            <section id="variable">
+                <h2>How to define Variable?</h2>
+                <h3>Python</h3>
+                <p>The <span class="keyword">equal sign</span> ("<code>=</code>") is put <span class="keyword">after the
+                        variable name</span> when creating variables in Python.
+                </p>
+                <img src="Python/variable.png" />
+                <h3>JavaScript</h3>
+                <p>Users can define variables in JavaScript by using the <span class="keyword">terms</span>
+                    <code>var</code>, <code>let</code>, and
+                    <code>const</code>.
+                </p>
+                <img src="JS/variable.png" style="margin-bottom: 15px;" />
+            </section>
+            <hr />
+            <section id="comment">
+                <h2>Commenting</h2>
+                <p><span class="keyword">Code comprehension</span> is aided by comments. For future use, one might
+                    remark on a paragraph, for
+                    example.</p>
+                <h3>Python</h3>
+                <ol>
+                    <li>Single-line comments</li>
+                    <p>Python will treat anything that <span class="keyword">comes after the hashtag</span>
+                        ("<code>#</code>") as a comment.</p>
+                    <img src="Python/singlelinecomment.png">
+                    <li>Mulit-line comments</li>
+                    <p>For each line of a multi-line comment, Python will <span class="keyword">begin with a
+                            hashtag</span> ("<code>#</code>"), as
+                        shown
+                        below:</p>
+                    <img src="Python/multilinecomment.png">
+                </ol>
+                <h3>JavaScript</h3>
+                <ol>
+                    <li>Single-line comments</li>
+                    <p>JavaScript will treat anything that comes after the <span class="keyword">double slashes</span>
+                        ("<code>//</code>") as a
+                        comment.</p>
+                    <img src="JS/singlelinecomment.png">
+                    <li>Mulit-line comments</li>
+                    <p>Unlike Python, JavaScript can use the <span class="keyword">symbols</span> ("<code>/*</code>")
+                        and ("<code>*/</code>") to wrap
+                        up a multi-line comment. </p>
+                    <img src="JS/multilinecomment.png">
+                </ol>
+            </section>
+            <hr />
+            <section id="logical">
+                <h2>Logical operators</h2>
+                <h3>Python</h3>
+                <ul>
+                    <li><code>and</code> is the AND operator</li>
+                    <li><code>or</code> is the OR operator</li>
+                    <li><code>not</code> is the NOT operator</li>
+                </ul>
+                <h3>JavaScript</h3>
+                <ul>
+                    <li><code>&&</code> is the AND operator</li>
+                    <li><code>||</code> is the OR operator</li>
+                    <li><code>!</code> is the NOT operator</li>
+                </ul>
+
+            </section>
+            <hr />
+            <section id="in&out">
+                <h2>Inputs & Outputs</h2>
+                <h3>Python</h3>
+                <ol>
+                    <li>Inputs</li>
+                    <p>In Python, the function <code>input()</code> can be used for <span class="keyword">asking
+                            input</span>. Variables would be
+                        assigned to <span class="keyword">store the input data</span>.</p>
+                    <img src="Python/input.png">
+                    <li>Outputs</li>
+                    <p>In Python, the function <code>print()</code> can be used to <span class="keyword">show the
+                            results</span>.</p>
+                    <img src="Python/output1.png">
+                    <p>Result of the <code>print()</code> function:</p>
+                    <img src="Python/output2.png">
+                </ol>
+                <h3>JavaScript</h3>
+                <ol>
+                    <li>Inputs</li>
+                    <p>In JavaScript, the function <code>prompt()</code> can be used for <span class="keyword">asking
+                            input</span>.</p>
+                    <img src="JS/input.png">
+                    <li>Outputs</li>
+                    <p>By using the <code>console.log()</code> function in JavaScript, users can <span
+                            class="keyword">send the values</span> inside
+                        the
+                        bracket to the terminal and <span class="keyword">display</span> them.</p>
+                    <img src="JS/output1.png">
+                    <p><span class="keyword">👇To try the coding mentioned above, click the button below.</span>
+                        <br /><span style="font-size:small;">(Apart from using the <code>console.log()</code>
+                            function, we will use another function <code>document.getElementById().value</code> to show
+                            the outcome in the textbox)</span>
+                    </p>
+                    <button onclick="welcome();" style="font-weight: bold;" class="button-85">Try it here !!</button>
+                    <div class="input"><input type="textbox" id="hello" /><span></span></div>
+                </ol>
+            </section>
+            <hr />
+            <section id="ifCondition">
+                <h2>If-Conditional</h2>
+                <p>The <span class="keyword">main Syntax difference</span> between the two languages' if-condition expressions is that Python uses
+                    "<code>elif</code>" rather than "<code>else if</code>".</p>
+                <h3>Python</h3>
+                <p>In Python, the users have to <span class="keyword">put the colon</span> ("<code>:</code>") after the condition.</p>
+                <img src="Python/ifcondition.png">
+                <h3>JavaScript</h3>
+                <p>In JavaScript, the users have to put the condition <span class="keyword">inside the brackets</span> ("<code>()</code>")</p>
+                <img src="JS/ifcondition.png">
+                <p><span class="keyword">👇Again, do not hesitate to test the script above!&#128540;</span></p>
+                <button onclick="GpaConverter();" style="font-weight: bold; margin-left: 10px;" class="button-85">Try it
+                    here !!</button>
+                <div class="input"><input type="textbox" id="grade" /><span></span></div>
+                <br />
+                <br />
+            </section>
+            <hr />
+            <section id="loop">
+                <h2>Loops</h2>
+                <p>The concept called "loop" is available in almost all computer languages, and it allows for the
+                    repeated execution of one or more statements.</p>
+                <p>In this section, we will introduce two type of loops, which are <span class="keyword">For-Loop</span>
+                    and
+                    <span class="keyword">While-Loop</span>.
+                    <br />The <span class="keyword">For-Loop</span> is often used to carry out a task a finite number of
+                    times.
+                    <br />The <span class="keyword">While-Loop</span> is used to carry out a task repeatedly as long as
+                    a continuation condition
+                    is true.
+                </p>
+                <h3>Python</h3>
+                <ol>
+                    <li>For-Loop</li>
+                    <p>In Python, users may use the <span class="keyword">keyword</span> <code>in</code> and the <span class="keyword">function</span> <code>range()</code> to
+                        perform the iteration.</p>
+                    <img src="Python/forloop.png">
+                    <li>While-Loop</li>
+                    <p>In Python, the users have to <span class="keyword">put the colon</span> ("<code>:</code>") after the condition. The loop would
+                        <span class="keyword">end</span> once the condition become <code>false</code></p>
+                    <img src="Python/whileloop.png">
+                </ol>
+                <h3>JavaScript</h3>
+                <ol>
+                    <li>For-Loop</li>
+                    <p>In JavaScript, users have to <span class="keyword">define several values</span> within the brackets. In the brackets, users
+                        must specify the loop variable with its <span class="keyword">starting value</span> (e.g., <code>var i = 0</code>), the
+                        condition that must be <code>true</code> to <span class="keyword">keep the loop running</span> (e.g.,
+                        <code>i &lt;= 99</code>),
+                        and how each loop will <span class="keyword">change the loop variable</span> (e.g., <code>i++</code>). Moreover, each
+                        expression need to be separated by a <span class="keyword">semicolon</span> ("<code>;</code>").
+                    </p>
+                    <img src="JS/forloop.png">
+                    <li>While-Loop</li>
+                    <p>In JavaScript, the syntax is acutally <span class="keyword">similar</span> to Python, except that users have to put the
+                        condition <span class="keyword">inside the brackets</span>.</p>
+                    <img src="JS/whileloop.png">
+                </ol>
+            </section>
+            <hr />
+            <section id="summary">
+                <h2 style="font-size: 28px;">🎯 Key Takeaway</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><!-- Intentionally Blank --></th>
+                            <th>Python</th>
+                            <th>JavaScript</th>
+                        <tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Code block</th>
+                            <td>
+                                <p><span class="keyword">Indentation is a must</span>, and without it, the program
+                                    will probably result with an error</p>
+                            </td>
+                            <td>
+                                <p>The amount of whitespace has <span class="keyword">no meaning</span>,
+                                    indentation is just for readability</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Definition of Variable</th>
+                            <td>
+                                <p>Equal ("<code>=</code>") sign</p>
+                            </td>
+                            <td>
+                                <p>Terms <code>var</code>, <code>let</code>, and <code>const</code></p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th>Commenting</th>
+                            <td>
+                                <p>Hashtag ("<code>#</code>") for <span class="keyword">both</span> the single-line
+                                    comments and multi-line
+                                    comments</p>
+                            </td>
+                            <td>
+                                <p>Double slashes ("<code>//</code>") for <span class="keyword">single-line
+                                        comments</span>; symbols
+                                    ("<code>/*</code>") and ("<code>*/</code>") to for <span class="keyword">multi-line
+                                        comments</span> </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Logical operators</th>
+                            <td>
+                                <p><code>and</code>, <code>or</code>, <code>not</code></p>
+                            </td>
+                            <td>
+                                <p><code>&&</code>, <code>||</code>, <code>!</code></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Inputs & Outputs</th>
+                            <td>
+                                <p>Function <code>input()</code> for <span class="keyword">asking input</span>; Function
+                                    <code>print()</code> for
+                                    <span class="keyword">showing result</span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>Function <code>prompt()</code> for <span class="keyword">asking input</span>;
+                                    Function <code>console.log()</code>
+                                    for <span class="keyword">showing result</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>If-Conditional</th>
+                            <td>
+                                <p>
+                                    Put the colon ("<code>:</code>") <span class="keyword">after</span> the condition
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Put the condition <span class="keyword">inside</span> the brackets
+                                    ("<code>()</code>")
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Loops</th>
+                            <td>
+                                <p>
+                                    Keyword <code>in</code> and function <code>range()</code> for <span
+                                        class="keyword">For-Loop</span>;
+                                    Put the colon ("<code>:</code>") after the condition for <span
+                                        class="keyword">While-Loop</span>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Define the expressions in the brackets and separate them with a semicolon
+                                    ("<code>;</code>") for <span class="keyword">For-Loop</span>;
+                                    Put the condition inside the brackets for <span class="keyword">While-Loop</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <a href="/index.html"><button class="button-64" role="button"><span class="text"><span class="text">Back to Home
+                            Page</span></button></a>
+        </div>
+
+        <div id="sidebar">
+            <h3>In this page</h1>
+                <ul style="font-style: italic;">
+                    <li><a href="#topic">Introduction</a></li>
+                    <li><a href="#codeBlock">Code block</a></li>
+                    <li><a href="#variable">Definition of Variable</a></li>
+                    <li><a href="#comment">Commenting</a></li>
+                    <li><a href="#logical">Logical operators</a></li>
+                    <li><a href="#in&out">Inputs & Outputs</a></li>
+                    <li><a href="#ifCondition">If-Conditional</a></li>
+                    <li><a href="#loop">Loops</a></li>
+                    <li><a href="#summary">Takeaway</a></li>
+                </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
+>>>>>>> 77484d9 (introduction)
