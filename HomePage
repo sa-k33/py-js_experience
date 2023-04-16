@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Coding Experience with Python</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 
 <body>
@@ -14,6 +14,8 @@
     </header>
 
     <main>
+        <h1>Wellcome! Let's explore "Our experience with Python programming</h1>
+        <p>Member: </p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
