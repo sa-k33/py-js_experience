@@ -12,7 +12,9 @@ function displayComparison(library) {
   switch (library) {
     case 'numpy':
       comparisonHtml = 
-        <><h3>NumPy</h3><p>In Python, NumPy is a popular library for numerical computing.</p><p>In JavaScript, you can use libraries like <a href="<https://mathjs.org/>" target="_blank">math.js</a> for similar functionality.</p></>
+        <><h3>NumPy</h3><p>In Python, NumPy is a popular library for numerical computing.</p><p>In JavaScript, you can use libraries like
+          <a href="<https://mathjs.org/>" target="_blank">math.js</a> for similar functionality.
+        </p></>
       ;
       break;
     case 'pandas':
