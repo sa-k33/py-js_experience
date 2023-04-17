@@ -61,7 +61,7 @@ table {
   border-collapse: collapse;
   border: 1px solid black;
   vertical-align: middle;
-  width: auto;
+  width: 70%;
 }
 
 * {
@@ -109,6 +109,11 @@ header {
 
 .nav__links li a:hover {
   color: #0088a9;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: beige;
 }
 
 #body {
