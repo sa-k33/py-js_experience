@@ -54,6 +54,7 @@ td {
   border: 1px solid black;
   font-size: 12.5pt;
   background-color: rgb(248, 235, 225);
+  width: max-content;
 }
 
 table {
