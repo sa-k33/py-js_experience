@@ -4,152 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="library.css" type="text/css">
   <title>Python vs JavaScript: Library Usage</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    #body {
-      display: flex;
-      overflow: auto;
-      margin-left: 60px;
-    }
-
-    #sidebar {
-      position: fixed;
-      top: 11%;
-      left: 75%;
-      background-color: darkseagreen;
-      padding: 0rem 7rem 1rem 1rem;
-      height: fit-content;
-      opacity: 0.8;
-    }
-
-    #section {
-      width: 65%;
-    }
-
-    p {
-      font-size: large;
-    }
-
-    li {
-      margin: 10px 0;
-      font-weight: bold;
-      font-size: large;
-    }
-
-    hr {
-      height: 2px;
-      width: 50%;
-      border-width: 0;
-      background-color: rgb(188, 157, 143);
-      text-align: left;
-      margin-left: 0;
-    }
-
-    code {
-      padding: 0 5px 2px;
-      font-size: .8em;
-      font-weight: 600;
-      background-color: rgb(196, 194, 194);
-      font-family: 'Roboto Mono', monospace;
-    }
-
-    p {
-      text-align: justify
-    }
-
-    .button-64 {
-      align-items: center;
-      background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-      border: 0;
-      border-radius: 8px;
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      display: flex;
-      font-family: inherit;
-      font-size: 20px;
-      justify-content: center;
-      line-height: 1em;
-      max-width: 100%;
-      min-width: 140px;
-      padding: 3px;
-      text-decoration: none;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      white-space: nowrap;
-      cursor: pointer;
-      margin: 50px 0 25px 0;
-      font-size: 16px;
-    }
-
-    .button-64:active,
-    .button-64:hover {
-      outline: 0;
-    }
-
-    .button-64 span {
-      background-color: rgb(5, 6, 45);
-      padding: 16px 24px;
-      border-radius: 6px;
-      width: 100%;
-      height: 100%;
-      transition: 300ms;
-    }
-
-    .button-64:hover span {
-      background: none;
-    }
-
-    #sample {
-      font-size: 7px;
-    }
-
-    #samplepicture {
-      font-size: 7px;
-    }
-
-    /*the styling for jQuery example*/
-    #panel,
-    #flip {
-      padding: 5px;
-      text-align: center;
-      color: white;
-      background-color: black;
-      border: solid 1px #c3c3c3;
-    }
-
-    #panel {
-      padding: 30px;
-      display: none;
-    }
-
-    /* code class*/
-    .highlight .highlight {
-      background: #0d1117;
-      color: #c9d1d9;
-    }
-
-    .highlight pre {
-      line-height: 125%;
-    }
-
-    pre {
-      padding: .5rem .75rem;
-    }
-  </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
     $(document).ready(function () {
       $("#flip").click(function () {
         $("#panel").slideToggle("slow");
       });
     });
   </script>
+
 </head>
 
 <body style="background-color: beige;">
@@ -183,48 +47,50 @@
         </p>
         <ol>
           <section id="react">
-          <li>React</li>
-          <p>
-            React is a popular front-end JavaScript framework that automatically updates the DOM whenever your data
-            changes.
-            The key to React's power is composable components. You build encapsulated components once and reuse them
-            throughout your application. For example, you might create an EmojiSearch component for search
-            functionality, a Comment component for comments, and Auth component for authentication. Then compose them
-            together to build the page you want.
-            <a href="https://ahfarmer.github.io/emoji-search/">
-              <h1>Emoji Search</h1>
-            </a>
-            <embed type="text/html" src="https://ahfarmer.github.io/emoji-search/ " width=100% height=60%>
-          <p>As shown in the emoji search demo, you can create reusable components for search, comments, filters, etc.
-            Then compose them together in different ways to generate multiple pages from a single set of components.
-            Whenever the underlying data updates, React efficiently re-renders only the changed components.
-          </p>
-          <p>In summary, React revolutionized front-end development by handling updates, facilitating composable
-            components, and enabling adaptable user experiences. You get to focus on designing interfaces instead of
-            manually updating the DOM.
-          </p>
-        </section>
-        <section id="jquery">
-          <li>jQuery</li>
-          <p>For adding some interactivity to your pages, <b>jQuery</b> is fun.
-            It has shortcuts for animations, getting external data, event responses, and updating HTML, CSS, and
-            JavaScript elements
-            - all in simple lines of code. Try this:
-          <div id="flip">Click Me!</div>
-          <div id="panel">Hello world!</div>
-          </p>
-        </section>
+            <li>React</li>
+            <p>
+              React is a popular front-end JavaScript framework that automatically updates the DOM whenever your data
+              changes.
+              The key to React's power is composable components. You build encapsulated components once and reuse them
+              throughout your application. For example, you might create an EmojiSearch component for search
+              functionality, a Comment component for comments, and Auth component for authentication. Then compose them
+              together to build the page you want.
+              <a href="https://ahfarmer.github.io/emoji-search/">
+                <h1>Emoji Search</h1>
+              </a>
+              <embed type="text/html" src="https://ahfarmer.github.io/emoji-search/ " width=100% height=60%>
+            <p>As shown in the emoji search demo, you can create reusable components for search, comments, filters, etc.
+              Then compose them together in different ways to generate multiple pages from a single set of components.
+              Whenever the underlying data updates, React efficiently re-renders only the changed components.
+            </p>
+            <p>In summary, React revolutionized front-end development by handling updates, facilitating composable
+              components, and enabling adaptable user experiences. You get to focus on designing interfaces instead of
+              manually updating the DOM.
+            </p>
+          </section>
+          <section id="jquery">
+            <li>jQuery</li>
+            <p>For adding some interactivity to your pages, <b>jQuery</b> is fun.
+              It has shortcuts for animations, getting external data, event responses, and updating HTML, CSS, and
+              JavaScript elements
+              - all in simple lines of code. Try this:
+            <div id="flip">Click Me!</div>
+            <div id="panel">Hello world!</div>
+            </p>
+          </section>
           <section id="moment">
-          <li>Moment.js</li>
-          <p><img src="moment.png">
-            Dates are tricky, so <b>Moment.js</b> was a lifesaver. It helps format dates in any locale, handle timezones
-            and
-            daylight savings, give relative dates like "tomorrow", and convert between calendars. Extra plugins provide
-            internationalization, time differences, duration, and holiday functionality.
-            Finally, a dating tool that works! No more searching documentation to figure out which method does what.
-            Moment hides date complexity so you can focus on building impressive web apps.
-          </p>
-        </section>
+            <li>Moment.js</li>
+            <p><img src="moment.png">
+              Dates are tricky, so <b>Moment.js</b> was a lifesaver. It helps format dates in any locale, handle
+              timezones
+              and
+              daylight savings, give relative dates like "tomorrow", and convert between calendars. Extra plugins
+              provide
+              internationalization, time differences, duration, and holiday functionality.
+              Finally, a dating tool that works! No more searching documentation to figure out which method does what.
+              Moment hides date complexity so you can focus on building impressive web apps.
+            </p>
+          </section>
 
         </ol>
       </section>
@@ -276,7 +142,8 @@
             <h2>Random</h2>
             <p>
               The <b>random</b> library is great for generating random numbers and shuffling sequences. You can use
-              <code>random.randint()</code> to get a random integer in a specified range, <code>random.random()</code> to get a float between 0
+              <code>random.randint()</code> to get a random integer in a specified range, <code>random.random()</code>
+              to get a float between 0
               and 1, and <code>random.shuffle()</code> to randomly shuffle the elements of a list.
             </p>
             <pre class="highlight">
@@ -316,6 +183,7 @@
             <li><a href="#pandas">Pandas</a></li>
             <li><a href="#random">Random</a></li>
           </ol>
+          <li><a href="https://sa-k33.github.io/py-js_experience/">Back to Home</a></li>
 
         </ul>
     </div>
