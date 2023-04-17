@@ -149,3 +149,8 @@ hr {
 main {
   margin-bottom: 25px;
 }
+
+p {
+  margin-top: 15px;
+  line-height: 2em;
+}
