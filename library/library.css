@@ -11,10 +11,9 @@ body {
 
 .sidebar {
   height: 100%;
-  width: 25%;
+  width: 20%;
   position: absolute;
   z-index: 1;
-  top: 0;
   right: 0;
   background-color: rgba(254, 255, 235, 0.929);
   overflow-x: visible;
