@@ -6,7 +6,7 @@ body {
 #body {
     display: flex;
     overflow: auto;
-    margin-left: 250px;
+    margin-left: 60px;
 }
 
 #sidebar {
@@ -20,7 +20,7 @@ body {
 }
 
 #section {
-    width: 60%;
+    width: 65%;
     word-spacing:5px;
     line-height:30px;
     
