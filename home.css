@@ -84,6 +84,11 @@ header {
 
 .logo {
   cursor: pointer;
+  align-items: left;
+}
+
+nav {
+  text-align: right;
 }
 
 .nav__links a {
